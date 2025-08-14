@@ -1,23 +1,258 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# VPN Keys Manager - Git Ignore Configuration
 
-# dependencies
+# ==========================================
+# DEPENDENCIES & NODE MODULES
+# ==========================================
 /node_modules
 /.pnp
 .pnp.js
+node_modules/
+jspm_packages/
 
-# testing
-/coverage
+# Yarn dependency files
+yarn.lock
+.yarn-integrity
+.yarn/
 
-# production
+# ==========================================
+# BUILD & PRODUCTION FILES
+# ==========================================
 /build
+/dist
+build/
+dist/
+*.tgz
 
-# misc
-.DS_Store
+# Webpack bundles
+bundle.js
+bundle.js.map
+
+# ==========================================
+# TESTING
+# ==========================================
+/coverage
+coverage/
+*.lcov
+.nyc_output
+
+# Jest
+__tests__/
+*.test.js
+*.test.ts
+*.test.tsx
+*.spec.js
+*.spec.ts
+*.spec.tsx
+
+# ==========================================
+# ENVIRONMENT VARIABLES & CONFIG
+# ==========================================
+# Environment files
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+.env.development
+.env.production
+.env.staging
 
+# Config files with sensitive data
+config.json
+secrets.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# ==========================================
+# DATABASE & DATA FILES
+# ==========================================
+# Backup database files (keep original db.json for development)
+db.backup.json
+db-*.json
+database.backup
+*.db
+*.sqlite
+*.sqlite3
+
+# Log files from database operations
+db.log
+database.log
+
+# ==========================================
+# LOGS & DEBUGGING
+# ==========================================
+logs/
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+lerna-debug.log*
+.npm
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ==========================================
+# CACHING & TEMPORARY FILES
+# ==========================================
+# Dependency directories cache
+.npm
+.eslintcache
+.cache/
+.parcel-cache/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional REPL history
+.node_repl_history
+
+# Temporary folders
+tmp/
+temp/
+.tmp/
+
+# ==========================================
+# DEVELOPMENT TOOLS & EDITORS
+# ==========================================
+# Visual Studio Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# WebStorm / IntelliJ
+.idea/
+*.iws
+*.iml
+*.ipr
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ==========================================
+# OPERATING SYSTEM FILES
+# ==========================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ==========================================
+# DEPLOYMENT & HOSTING
+# ==========================================
+# Vercel
+.vercel
+.vercel.json.bak
+
+# Netlify
+.netlify/
+
+# Railway
+.railway/
+
+# Heroku
+.slugignore
+
+# Docker
+Dockerfile.prod
+.dockerignore
+
+# ==========================================
+# VPN KEYS & SECURITY (CRITICAL)
+# ==========================================
+# Never commit real VPN keys or sensitive config
+*.ovpn
+*.conf
+wireguard/
+vpn-keys/
+private-keys/
+certs/
+
+# Server configuration files with IPs
+server-config.json
+servers.json
+
+# Authentication & API keys
+auth.json
+api-keys.json
+*.token
+
+# ==========================================
+# MONITORING & ANALYTICS
+# ==========================================
+# Error logs
+error.log
+access.log
+app.log
+
+# Performance monitoring
+.clinic/
+
+# ==========================================
+# PACKAGE MANAGERS
+# ==========================================
+# npm
+package-lock.json.bak
+
+# pnpm
+pnpm-lock.yaml
+.pnpm-store/
+
+# Yarn
+yarn-error.log
+
+# ==========================================
+# MISC & OTHERS
+# ==========================================
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Documentation builds
+/docs/build/
+
+# Storybook
+.out
+.storybook-out
+
+# End of .gitignore
