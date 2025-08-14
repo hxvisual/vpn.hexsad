@@ -3,33 +3,14 @@
   "buildCommand": "npm run build",
   "outputDirectory": "build",
   "functions": {
-    "server.js": {
-      "runtime": "nodejs@20.x"
+    "api/server.js": {
+      "runtime": "nodejs18@18.x"
     }
   },
   "rewrites": [
     {
       "source": "/api/(.*)",
       "destination": "/api/server.js"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "GET, POST, PUT, DELETE, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, Authorization"
-        }
-      ]
     }
   ]
 }
