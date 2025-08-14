@@ -4,7 +4,7 @@
   "outputDirectory": "build",
   "functions": {
     "server.js": {
-      "runtime": "nodejs18@18.x"
+      "runtime": "nodejs@20.x"
     }
   },
   "rewrites": [
