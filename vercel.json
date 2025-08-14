@@ -1,23 +1,16 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "build/**",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "api/server.js",
-      "use": "@vercel/node"
+  "buildCommand": "npm run build",
+  "outputDirectory": "build",
+  "functions": {
+    "server.js": {
+      "runtime": "nodejs18.x"
     }
-  ],
-  "routes": [
+  },
+  "rewrites": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/server.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/build/$1"
+      "source": "/api/(.*)",
+      "destination": "/api/server.js"
     }
   ],
   "headers": [
