@@ -1,1 +1,23 @@
-{}
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin",
+      "status": "active",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "keys": {
+        "vless": "",
+        "shadowsocks": ""
+      }
+    }
+  ],
+  "serverConfig": {
+    "ip": "8.8.8.8",
+    "location": "USA",
+    "status": "unknown",
+    "lastPing": 0,
+    "lastCheck": null
+  }
+}

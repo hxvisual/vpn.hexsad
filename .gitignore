@@ -56,6 +56,7 @@ __tests__/
 .env.development
 .env.production
 .env.staging
+.env.example
 
 # Config files with sensitive data
 config.json
@@ -75,6 +76,7 @@ database.backup
 *.db
 *.sqlite
 *.sqlite3
+db.json
 
 # Log files from database operations
 db.log
